@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Artic-shop
+### Technical assessment for a job interview.
+#### Task Description:
+Using the public API for the Art Institute of Chicago, we would like you to create a user interface serving up a paginated catalogue of products in their shop.
 
-## Getting Started
+At a minimum, the page should show a product's title, image and display price. You may use any technologies you see fit to achieve this, though of course showing proficiency in any of the technologies specified in the job description will be advantageous.
 
-First, run the development server:
+#### Outcome Description:
+I created a small app using nextjs and typescript that gets hold of SSR o display the 10 first aricles on build time. The app will listen for event on the component and will retrieve the next 10 items based in the current page once changed.
+#### API: 
+https://api.artic.edu/docs/
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**Install**
+<br>
+  `npm i`
+  <br>
+  or
+  <br>
+  `yarn install`
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Run locally**
+<br>
+  `npm start`
+  <br>
+  or
+  <br>
+  `yarn dev`
+<br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Pagination approach
+As the app required of pagination, I created a component that handles it manually. But another approach to this would have been to make an infinite scrolling component. I'd have fetch the next 10 articles by detecting when the user's viewport was at the bottom or near the bottom of the screen.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Other possible features.
+The API provides ElasticSearch so it wouldn't be difficult to create an input component that fetches new data based on the input value after a few milliseconds after the user stops typing.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Also, I could have made a filter component that retrieves data based on specific terms that the API provides.
