@@ -1,0 +1,33 @@
+
+.list { 
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items:center;
+  gap: 0.5rem;
+  margin-block: 2rem;
+  width: 100%;
+  font-weight: bold;
+  list-style-type: none;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer; 
+}
+.currentListItem{
+  background: #0400ff;
+  color: #fff;
+}
+.listItem:hover {
+  box-shadow: 0 2px 8px #00000029;
+}
+
+.dots {
+  font-size: x-large;
+  letter-spacing: 0.2rem;
+}
