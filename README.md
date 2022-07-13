@@ -11,22 +11,25 @@ I created a small app using nextjs and typescript that gets hold of SSR o displa
 https://api.artic.edu/docs/
 
 **Install**
-<br>
-  `npm i`
-  <br>
+  ```
+  npm i
+  ```
+
   or
-  <br>
-  `yarn install`
-<br>
+
+  ```
+  yarn install
+  ```
+
 
 **Run locally**
-<br>
-  `npm start`
-  <br>
+  ```
+  npm start
+  ```
   or
-  <br>
-  `yarn dev`
-<br>
+  ```
+  yarn dev
+  ```
 
 ## Pagination approach
 As the app required of pagination, I created a component that handles it manually. But another approach to this would have been to make an infinite scrolling component. I'd have fetch the next 10 articles by detecting when the user's viewport was at the bottom or near the bottom of the screen.
